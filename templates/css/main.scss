@@ -5,6 +5,7 @@ body{
     font-family:'Myriad pro';
     padding: 0;
     margin:0;
+    background-color: rgb(43, 49, 54);
 }
 ul{
     list-style: none;
@@ -101,5 +102,34 @@ div{
         }
       }
 
-}  
+} 
+@media only screen and (min-width: 1000px){
+body{
+display: grid;
+grid-template-columns: 60% auto;
+grid-template-rows: 12em auto;
+}
+.nav-container{
+    padding-left: 4em;
+    font-size: 2vh;
+}
+.main_area{
+    grid-column: 1;
+    align-items:center;
+    height:2fr;
+    grid-row: 2 / 4;
+ 
+    .circle{
+        padding-left: 15 em;
+        padding-top:10 em;
+    }
+}
+.right{
+    visibility: visible;
+    grid-column: 2;
+    grid-row: 1 / 2;
+}
+
+
+} 
   

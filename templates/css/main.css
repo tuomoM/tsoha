@@ -3,6 +3,7 @@ body {
   font-family: 'Myriad pro';
   padding: 0;
   margin: 0;
+  background-color: #2b3136;
 }
 
 ul {
@@ -123,5 +124,43 @@ div {
   padding-top: -2em;
   padding-left: .2em;
   font-size: small;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 60% auto;
+        grid-template-columns: 60% auto;
+    -ms-grid-rows: 12em auto;
+        grid-template-rows: 12em auto;
+  }
+  .nav-container {
+    padding-left: 4em;
+    font-size: 2vh;
+  }
+  .main_area {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 2fr;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 2;
+    grid-row: 2 / 4;
+  }
+  .main_area .circle {
+    padding-left: 15 em;
+    padding-top: 10 em;
+  }
+  .right {
+    visibility: visible;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
 }
 /*# sourceMappingURL=main.css.map */
