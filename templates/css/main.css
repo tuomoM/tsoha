@@ -1,0 +1,127 @@
+@import url("https://use.typekit.net/ilc1dyh.css");
+body {
+  font-family: 'Myriad pro';
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+div {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-container {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #2b3136;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2em;
+}
+
+.nav-container ul {
+  font-size: xxx-large;
+}
+
+.nav-container .links ul {
+  font-size: small;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-container .links ul a {
+  display: block;
+  padding: 1em 1em;
+}
+
+.right {
+  visibility: hidden;
+}
+
+.main_area {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 60% auto;
+      grid-template-columns: 60% auto;
+  height: 400px;
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  background-color: #454747;
+  color: white;
+  padding: 2em;
+  font-size: xx-large;
+}
+
+.main_area .line2 {
+  padding-left: 1em;
+}
+
+.main_area .line3 {
+  padding-left: 2em;
+}
+
+.main_area .circle {
+  padding: 0;
+  margin: 0;
+  place-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-style: solid;
+  border-color: white;
+  border-width: .5px;
+  font-size: medium;
+  color: white;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.1);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.main_area .circle .mainText {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / span 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/span 2;
+  padding-top: .2em;
+  padding-left: 0;
+  font-size: xxx-large;
+  padding-bottom: -1em;
+  margin: 0;
+}
+
+.main_area .circle .subText {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  float: left;
+  margin: -1;
+  padding-top: -2em;
+  padding-left: .2em;
+  font-size: small;
+}
+/*# sourceMappingURL=main.css.map */
