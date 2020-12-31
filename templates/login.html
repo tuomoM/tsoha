@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Po-ligo</title>
+    <link rel="stylesheet" href="./css/login.css"> 
+</head>
+<body>
+    
+    <div class="nav-container">
+        <ul>
+           <li><a href="index.html">Po-ligo</a></li> 
+        </ul>
+        <div class="links">
+            <ul>
+
+                <li><a href="#">Info</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="main"> 
+        <div class="card1">
+        <div class="loginlabel"> Log in</div>
+      <form action="/login" method="POST">
+        <p>Userid:</p>
+        <input type="text" name="username">
+        <p>Password</p>
+        <input type="text" name="password">
+    
+        <button type="SUBMIT">Log in</button>
+      </form>
+    </div>
+    <div class="card2">
+     <div class="midtext"> <p> Or create a new Userid</p></div>
+    
+
+     <div class="newU">
+
+     <form action="/register" method="POST">
+        <p>Userid:</p>
+        <input type="text" name="username">
+        <p>Password</p>
+        <input type="text" name="password">
+        <p>Retype Password</p>
+        <input type="text" name="passwordCheck">
+        <button type="SUBMIT">Register id</button>
+     </form>
+
+
+     </div>
+
+
+    </div>
+</div>
+<div class="right"><img src="./building.gif" alt=""></div>
+</body>
+</html>

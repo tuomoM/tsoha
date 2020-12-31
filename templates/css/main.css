@@ -1,9 +1,36 @@
+/*
+$headerbg:rgb(43, 49, 54);
+$backcolor:rgb(43, 49, 54);
 @import url("https://use.typekit.net/ilc1dyh.css");
-body {
-  font-family: 'Myriad pro';
+$appFont: 'Myriad pro'
+*/
+@import url("https://use.typekit.net/ilc1dyh.css");
+@import url("https://use.typekit.net/ilc1dyh.css");
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+div {
   padding: 0;
   margin: 0;
-  background-color: #2b3136;
+}
+
+body {
+  background-color: #454747;
+  color: white;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
 }
 
 ul {
@@ -22,7 +49,19 @@ div {
   margin: 0;
 }
 
+body {
+  background-color: #454747;
+  color: white;
+  margin: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
 .nav-container {
+  font-family: "Myriad pro";
   border-width: 1px;
   border-color: black;
   border-style: solid;
@@ -31,8 +70,8 @@ div {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 2em;
 }
 
@@ -41,7 +80,7 @@ div {
 }
 
 .nav-container .links ul {
-  font-size: small;
+  font-size: medium;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,6 +91,50 @@ div {
   padding: 1em 1em;
 }
 
+body {
+  font-family: "Myriad pro";
+  padding: 0;
+  margin: 0;
+  background-color: #454747;
+}
+
+/*
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+div{
+    padding: 0;
+    margin: 0;
+}
+.nav-container{
+    border-width: 1px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    background-color:$headerbg;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    ul{
+        font-size:xxx-large;
+    }
+    .links{
+        ul{
+            font-size: small;
+            display: flex;
+            a{
+                display: block;
+                padding: 1em 1em;
+            }
+        }
+    }
+}
+*/
 .right {
   visibility: hidden;
 }
@@ -136,8 +219,7 @@ div {
         grid-template-rows: 12em auto;
   }
   .nav-container {
-    padding-left: 4em;
-    font-size: 2vh;
+    padding-left: 2.5em;
   }
   .main_area {
     -ms-grid-column: 1;

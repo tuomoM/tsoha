@@ -1,12 +1,19 @@
-$headerbg:rgb(4, 14, 6);
-$backcolor:lighen($headerbg, 40%);
+/*
+$headerbg:rgb(43, 49, 54);
+$backcolor:rgb(43, 49, 54);
 @import url("https://use.typekit.net/ilc1dyh.css");
+$appFont: 'Myriad pro'
+*/
+@import './fontsandcolors';
+
+@import './navbar';
 body{
-    font-family:'Myriad pro';
+    font-family:$appFont;
     padding: 0;
     margin:0;
-    background-color: rgb(43, 49, 54);
+    background-color:$backcolor;
 }
+/*
 ul{
     list-style: none;
     margin: 0;
@@ -24,7 +31,7 @@ div{
     border-width: 1px;
     border-color: rgb(0, 0, 0);
     border-style: solid;
-    background-color: rgb(43, 49, 54);
+    background-color:$headerbg;
     display: flex;
     justify-content: space-between;
     padding: 2em;
@@ -41,7 +48,11 @@ div{
             }
         }
     }
-}  
+}
+*/
+
+
+
 .right{
     visibility: hidden;
 }
@@ -110,15 +121,15 @@ grid-template-columns: 60% auto;
 grid-template-rows: 12em auto;
 }
 .nav-container{
-    padding-left: 4em;
-    font-size: 2vh;
+    padding-left: 2.5em;
+   
 }
 .main_area{
     grid-column: 1;
     align-items:center;
     height:2fr;
     grid-row: 2 / 4;
- 
+    
     .circle{
         padding-left: 15 em;
         padding-top:10 em;

@@ -1,0 +1,86 @@
+@import './fontsandcolors';
+@import './navbar';
+.right{
+   visibility: hidden;
+}
+button{
+    margin-top: 0.5em;
+    display: inline-block;
+    padding: 0.25em 2.2em;
+    border-radius: 0.1em;
+    border: 0.1em solid white;
+    height: 1.8em;
+    box-sizing: border-box;
+    background-color: $backcolor;
+    color:white;
+    
+}
+button:hover{
+    color:grey;
+    background-color:lighter($backcolor, 10%);
+ }
+
+.main{
+    font-family: $appFont;
+    padding-left: 2em ;
+    padding-top: 1em;
+    display: grid;
+    grid-gap: .5em;
+    grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
+    .card1{
+       
+        margin-top: 1em;
+        width: 220px;
+        display: block;
+        form{
+            margin-top: 1em;
+        }
+        button{
+            margin-top:3.3em;
+        }
+    }
+    .card2{
+        margin-top: 1em;
+        width: 220px;
+        display: block;
+        form{
+            margin-top: 1em;
+        }
+    }
+    .card1.loginlabel{
+        padding-left: 3em;
+        padding-top: .35em;
+        font-size: larger;
+        
+    }
+    .card2.midtext{
+        padding: 3em;
+    }
+ 
+}
+@media only screen and (min-width: 1200px){
+    body{
+        display: grid;
+        grid-template-columns: 60% auto;
+        grid-template-rows: 12em auto;
+    }
+    .nav-container{
+        grid-column: 1;
+        grid-row:1;
+    }
+
+    .main{
+
+        grid-column: 1/1;
+   
+        height:2fr;
+        grid-row: 2 / 4;
+    }
+    .right{
+        visibility: visible;
+        grid-column: 2/2;
+        grid-row: 1 / 3;
+    }
+}
+
+
