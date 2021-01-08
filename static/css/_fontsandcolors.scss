@@ -1,0 +1,31 @@
+$headerbg:rgb(43, 49, 54);
+$backcolor:rgb(69, 71, 71);
+@import url("https://use.typekit.net/ilc1dyh.css");
+$appFont: 'Myriad pro';
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+div{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: $backcolor;
+    color:white;
+    margin:0;
+}
+p{
+    padding:0;
+    margin:0;
+}
+input[type = text]{
+    background-color: lighten($backcolor,30%);
+    border-radius: 1em;
+    border-width: 0.1em;
+}

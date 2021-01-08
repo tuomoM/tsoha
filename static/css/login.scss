@@ -1,25 +1,11 @@
 @import './fontsandcolors';
 @import './navbar';
+@import './buttonsetc'
 .right{
   
    display: none;
 }
-button{
-    margin-top: 0.5em;
-    display: inline-block;
-    padding: 0.25em 2.2em;
-    border-radius: 0.1em;
-    border: 0.1em solid white;
-    height: 1.8em;
-    box-sizing: border-box;
-    background-color: $backcolor;
-    color:white;
-    
-}
-button:hover{
-    color:grey;
-    background-color:lighter($backcolor, 10%);
- }
+
 
 .main{
     font-family: $appFont;

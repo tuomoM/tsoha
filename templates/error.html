@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Po-ligo - error</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> 
+</head>
+<body>
+   <div class="nav-container">
+       <ul>
+          <li><a href="/">Po-ligo</a></li> 
+       </ul>
+       <div class="links">
+           {% if session.username %}
+           <ul>
+               <li><a href="/user">{{session.username}}</a></li>
+               <li><a href="/logout">Log out</a></li>
+               <li><a href="#">Info</a></li>
+           </ul>
+           {% else %}
+           <ul>
+               <li><a href="/login">Log in</a></li>
+               <li><a href="#">Info</a></li>
+           </ul>
+           {% endif %}
+       </div>
+   </div>
+
+   <div class="main_area">
+
+    Error {{message}}
+   </div>
+    
+</body>
+</html>

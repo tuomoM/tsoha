@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/maintainMenu.css') }}"> 
+</head>
+<body>
+   <div class="nav-container">
+       <ul>
+          <li><a href="/">Po-ligo</a></li> 
+       </ul>
+       <div class="links">
+           {% if session.username %}
+           <ul>
+               <li><a href="/user">{{session.username}}</a></li>
+               <li><a href="/logout">Log out</a></li>
+               <li><a href="#">Info</a></li>
+           </ul>
+           {% else %}
+           <ul>
+               <li><a href="/login">Log in</a></li>
+               <li><a href="#">Info</a></li>
+           </ul>
+           {% endif %}
+       </div>
+   </div>   
+   <div class="main_area">
+    <a href="/maintainNouns" class="button1">Maintain nouns</a>   
+    <a href="/maintainTimeforms" class="button1">Maintain time formats</a>
+    <a href="/maintainVerbs" class="button1">Maintain verbs</a>
+   </div>
+</body>
+</html>

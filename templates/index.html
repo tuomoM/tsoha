@@ -4,18 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Po-ligo</title>
-   <link rel="stylesheet" href="./css/main.css"> 
+<!--  <link rel="stylesheet" href="./css/main.css"> -->
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"> 
 </head>
 <body>
    <div class="nav-container">
        <ul>
-          <li><a href="index.html">Po-ligo</a></li> 
+          <li><a href="/">Po-ligo</a></li> 
        </ul>
        <div class="links">
+           {% if session.username %}
            <ul>
-               <li><a href="login.html">Log in</a></li>
+               <li><a href="/user">{{session.username}}</a></li>
+               <li><a href="/logout">Log out</a></li>
                <li><a href="#">Info</a></li>
            </ul>
+           {% else %}
+           <ul>
+               <li><a href="/login">Log in</a></li>
+               <li><a href="#">Info</a></li>
+           </ul>
+           {% endif %}
        </div>
    </div>
   
@@ -25,9 +34,19 @@
             <div class="line2">portuguése</div>
             <div class="line3">trainer</div>
         </div>
-       <div class="circle"><div class="mainText"><a href="#">Start</a> </div> <div class="subText">as guest</div></div>
-   </div>
+       <div class="circle"><div class="mainText"><a href="#">Start</a> </div> <div class="subText">
+        {% if session.username %}  {%else%}  as guest {%endif%}
+        </div></div>
+       
 
-<div class="right"><img src="landscape-1.jpeg" alt=""></div>
+     
+   </div>
+   {%if session.user_type %}
+
+   <a href="/maintain" class="button1"> Maintain vocabulary</a>
+
+   {%endif%}
+<!--<div class="right"><img src="landscape-1.jpeg" alt=""></div> -->
+ <div class="right"><img src="{{url_for('static', filename='landscape-1.jpeg')}}" alt=""></div>
 </body>
 </html>

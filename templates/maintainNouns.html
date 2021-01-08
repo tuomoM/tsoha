@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/maintainMenu.css') }}"> 
+</head>
+<body>
+    
+   <div class="nav-container">
+       <ul>
+          <li><a href="/">Po-ligo</a></li> 
+       </ul>
+       <div class="links">
+           {% if session.username %}
+           <ul>
+               <li><a href="/user">{{session.username}}</a></li>
+               <li><a href="/logout">Log out</a></li>
+               <li><a href="#">Info</a></li>
+           </ul>
+           {% else %}
+           <ul>
+               <li><a href="/login">Log in</a></li>
+               <li><a href="#">Info</a></li>
+           </ul>
+           {% endif %}
+       </div>
+   </div> 
+   <div class="main_area">
+<div class="maintainText">Maintain Nouns</div>
+
+   <form action="/maintainNouns" method = "POST" class = "vocab">
+
+       <select name="gender" id="gender">
+           <option value='f'>Uma</option>
+           <option value="m">um</option>
+       </select>
+       <input type="text" name = "noun">
+       <input type="text" name = "english">
+       <button type = "SUBMIT"> Save noun</button>
+   </form>
+
+   {%if nouns %}
+   <div class="CurrentNouns"> <div class="nounsHeader">Current nouns</div>
+   <table class = "ftheader">
+     <thead>
+         <th>gender</th>
+         <th>portuguése noun</th>
+         <th>English description</th>
+         <th>edit</th>
+     </thead>
+     <tbody>
+        {%for noun in nouns%}
+        <tr>
+            <td>{{noun[2]}}</td>
+            <td>{{noun[0]}}</td>
+            <td>{{noun[1]}}</td>
+            <td><a href="/editNoun/{{noun1}}" class="button2"> edit</a></td>
+        </tr>
+
+        {% endfor %}
+    </tbody>
+   </table>
+</div>
+
+
+
+   {%endif%}
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+@import './fontsandcolors';
+@import './buttonsetc';
+@import './navbar';
+
+body{
+    font-family:$appFont;
+    padding: 0;
+    margin:0;
+    background-color:$backcolor;
+    display: grid;
+}
+table{
+ padding: 2em;
+ margin: 1em;   
+ background-color: $headerbg;
+ columns: white;
+ th{
+   margin-bottom: 1em;
+ }
+ th, tr{
+  padding: 0.5em;
+  margin: 0.5em;
+ }
+}
+
+
+.vocab{
+    display: inline-block;
+    margin: 2em;
+    padding: 2em;
+}
+.maintainText{
+    font-size: x-large;
+    padding-bottom: 2em;
+}

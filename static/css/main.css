@@ -33,6 +33,12 @@ p {
   margin: 0;
 }
 
+input[type=text] {
+  background-color: #919494;
+  border-radius: 1em;
+  border-width: 0.1em;
+}
+
 ul {
   list-style: none;
   margin: 0;
@@ -58,6 +64,12 @@ body {
 p {
   padding: 0;
   margin: 0;
+}
+
+input[type=text] {
+  background-color: #919494;
+  border-radius: 1em;
+  border-width: 0.1em;
 }
 
 .nav-container {
@@ -99,19 +111,20 @@ body {
 }
 
 a.button1 {
+  margin: 2em;
   display: inline-block;
-  padding: 0.35em 1.2em;
+  padding: .25em 1.6em;
   border: 0.1em solid white;
   border-radius: 0.12 em;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-decoration: none;
-  color: red;
+  color: white;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
-a.button1 :hover {
+a.button1:hover {
   color: grey;
   background-color: lighter(#454747, 10%);
 }
@@ -125,7 +138,7 @@ a.button1 :hover {
   display: grid;
   -ms-grid-columns: 60% auto;
       grid-template-columns: 60% auto;
-  height: 2fr;
+  height: 1fr;
   background-color: #454747;
   color: white;
   padding: 2em;
@@ -187,14 +200,14 @@ a.button1 :hover {
   font-size: small;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 780px) {
   body {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 60% auto;
         grid-template-columns: 60% auto;
-    -ms-grid-rows: 12em auto 4em;
-        grid-template-rows: 12em auto 4em;
+    -ms-grid-rows: 8em 18em auto;
+        grid-template-rows: 8em 18em auto;
   }
   .nav-container {
     padding-left: 2.5em;
@@ -207,12 +220,18 @@ a.button1 :hover {
             align-items: center;
     height: 2fr;
     -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    grid-row: 2 / 4;
+    grid-row: 2;
   }
   .main_area .circle {
     padding-left: 15 em;
     padding-top: 10 em;
+  }
+  a.button1 {
+    -ms-grid-rows: 3;
+        grid-template-rows: 3;
+    -ms-grid-columns: 1;
+        grid-template-columns: 1;
+    width: 12em;
   }
   .right {
     display: initial;
@@ -221,12 +240,6 @@ a.button1 :hover {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1 / 3;
-  }
-  a.button1 {
-    -ms-grid-rows: 3;
-        grid-template-rows: 3;
-    -ms-grid-columns: 1;
-        grid-template-columns: 1;
   }
 }
 /*# sourceMappingURL=main.css.map */
